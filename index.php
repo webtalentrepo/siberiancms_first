@@ -51,6 +51,6 @@ $config = new Zend_Config($application->getOptions(), true);
 Zend_Registry::set('config', $config);
 
 session_cache_limiter(false);
-
+exit('dd');
 /** Running */
 $application->bootstrap()->run();
