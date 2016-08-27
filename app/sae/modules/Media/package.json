@@ -1,0 +1,11 @@
+{
+  "name": "Media",
+  "decription": "",
+  "version": "4.2.6",
+  "dependencies": {
+    "system": {
+      "type": "SAE",
+      "version": "4.2.0"
+    }
+  }
+}
