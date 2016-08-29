@@ -6,36 +6,29 @@
  * Time: 8:59 AM
  */
 $schemas = (!isset($schemas)) ? array() : $schemas;
-$schemas = ['review'] = array(
+$schemas['review'] = array(
 	'review_id' => array(
 		'type' => 'int(11) unsigned',
 		'auto_increment' => true,
-		'primary' => true,
+		'primary' => true
 	),
 	'customer_id' => array(
-		'type' => 'int(11) unsigned',
-		'is_null' => true,
-		'foreign_key' => array(
-			'table' => 'customer',
-			'column' => 'customer_id',
-			'name' => 'FK_REVIEW_CUSTOMER_ID',
-			'on_update' => 'CASCADE',
-			'on_delete' => 'CASCADE',
-		),
+		'type' => 'int(11)',
+		'is_null' => true
 	),
 	'value_id' => array(
-		'type' => 'int(11) unsigned',
+		'type' => 'int(11) unsigned'
 	),
 	'review_content' => array(
 		'type' => 'text',
 		'is_null' => true,
 		'charset' => 'utf8',
-		'collation' => 'utf8_general_ci',
+		'collation' => 'utf8_general_ci'
 	),
 	'created_at' => array(
-		'type' => 'datetime',
+		'type' => 'datetime'
 	),
 	'updated_at' => array(
-		'type' => 'datetime',
-	),
+		'type' => 'datetime'
+	)
 );

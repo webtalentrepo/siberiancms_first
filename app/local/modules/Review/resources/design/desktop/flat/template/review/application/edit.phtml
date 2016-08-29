@@ -1,0 +1,12 @@
+<?php $option_value = $this->getOptionValue(); ?>
+<?php $review = $option_value->getObject(); ?>
+<div id="list" class="edit_page formulaire">
+	<div class="section">
+		<?php
+		echo $this->getLayout()
+			->addPartial('background_image', 'Core_View_Default', 'application/customization/features/edit/background_image.phtml')
+			->setValueId($option_value->getId())
+			->toHtml();
+		?>
+	</div>
+</div>
