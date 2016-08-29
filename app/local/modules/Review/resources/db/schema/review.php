@@ -23,6 +23,9 @@ $schemas = ['review'] = array(
 			'on_delete' => 'CASCADE',
 		),
 	),
+	'value_id' => array(
+		'type' => 'int(11) unsigned',
+	),
 	'review_content' => array(
 		'type' => 'text',
 		'is_null' => true,
