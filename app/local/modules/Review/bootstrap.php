@@ -1,5 +1,5 @@
 <?php
-class IndividualPush_Bootstrap {
+class Review_Bootstrap {
 
     public static function init($bootstrap)
     {
@@ -8,5 +8,6 @@ class IndividualPush_Bootstrap {
         # Models
         require_once "{$base}/Model/Review.php";
         require_once "{$base}/Model/Db/Table/Review.php";
+	
     }
 }
