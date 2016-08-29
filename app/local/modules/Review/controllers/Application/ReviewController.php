@@ -1,7 +1,8 @@
 <?php
 
-class Review_ApplicationController extends Application_Controller_Default
+class Review_Application_ReviewController extends Application_Controller_Default
 {
+	
 	/**
 	 * Affichage de la boxe
 	 */
@@ -32,4 +33,5 @@ class Review_ApplicationController extends Application_Controller_Default
 	{
 		exit;
 	}
+	
 }
