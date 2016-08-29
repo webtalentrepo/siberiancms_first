@@ -4,7 +4,7 @@ $category = "contact";
 
 # Install icons
 $icons = array(
-	'/catalog/catalog6.png',
+	'/app/local/modules/Review/resources/media/library/catalog6.png',
 );
 
 $result = Siberian_Feature::installIcons($name, $icons);
@@ -28,7 +28,7 @@ $option = Siberian_Feature::install($category, $data, array('code'));
 
 # Icons Flat
 $icons = array(
-	'/catalog/catalog1-flag.png',
+	'/app/local/modules/Review/resources/media/library/catalog1-flag.png',
 );
 
 Siberian_Feature::installIcons("{$name}-flat", $icons);
