@@ -1,0 +1,249 @@
+<sb-section title="'<?php echo addslashes($this->_("QRCode Settings")) ?>'">
+
+    <form id="form_qrcode" ng-submit="saveModal();" class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div class="help-block"><?php echo $this->_("In order to display a QRCode linking to your previewer, please fill in stores URL."); ?></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label><?php echo $this->_("Apple Store URL:") ?></label>
+                <input type="text" ng-model="config.apple_store_url" class="form-control" id="apple_store_url" name="apple_store_url" maxlength="250"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label><?php echo $this->_("Play Store URL:") ?></label>
+                <input type="text" ng-model="config.play_store_url" class="form-control" id="play_store_url" name="play_store_url" maxlength="250"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-primary pull-right" value="<?php echo $this->_("Save") ?>">
+            </div>
+        </div>
+    </form>
+</sb-section>
+
+<sb-section title="'<?php echo addslashes($this->_("Configuration Settings")) ?>'">
+        <form id="form_upload" class="form-horizontal" method="post">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label for="list_language"><?php echo $this->_("Language");?></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-5">
+                    <select id="list_language" ng-change="findPreviewerByLanguage(config.language_code)" ng-model="config.language_code" ng-options="k as v for (k, v) in languages" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label for="chk_bt">
+                        <input type="checkbox" ng-model="config.show_modal_button" id="chk_bt"/>
+                        <?php echo $this->_("Enable modal button in editor"); ?>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label><?php echo $this->_("First paragraph:") ?></label>
+                    <ng-ckeditor ng-if="config" bind="config.modal_text_1" skin="moono" remove-buttons="Image,Button,HiddenField,ImageButton,Select,Textarea,TextField,Radio,Checkbox,Form" remove-plugins="print,iframe,flash,smiley,pagebreak,language,scayt,selectall,templates,specialchar" msn-count="Number of typed characters:"></ng-ckeditor>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label><?php echo $this->_("Second paragraph:") ?></label>
+                    <ng-ckeditor ng-if="config" bind="config.modal_text_2" skin="moono" remove-buttons="Image,Button,HiddenField,ImageButton,Select,Textarea,TextField,Radio,Checkbox,Form" remove-plugins="print,iframe,flash,smiley,pagebreak,language,scayt,selectall,templates,specialchar" msn-count="Number of typed characters:"></ng-ckeditor>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary pull-right" ng-click="saveModal();"><?php echo $this->_("Save") ?></button>
+                </div>
+            </div>
+        </form>
+    </sb-section>
+
+    <sb-section title="'<?php echo addslashes($this->_("Image Settings")) ?>'" ng-show="as_saved">
+        <form id="form_upload_image" class="form-horizontal" method="post">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <p class="help-block"><b><?php echo $this->_("File types:"); ?></b> jpg, png, ico, gif</p>
+                </div>
+            </div>
+            <div class="form-group upload_area">
+                <div class="col-md-10">
+                    <h4><?php echo $this->_("Modal image:"); ?></h4>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="upload_a_file">
+                        <label for="previewer_img_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                        <input id="previewer_img_uploader" type="file" nv-file-select="" uploader="previewer_img_uploader" />
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="drop_a_file">
+                        <label><?php echo $this->_("OR"); ?></label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="drop_a_file">
+                        <label><?php echo $this->_("Drop your image here"); ?></label>
+                        <div ng-show="previewer_img_uploader.isHTML5">
+                            <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="previewer_img_uploader" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2" ng-if="config.modal_image">
+                    <label><?php echo $this->_("Current image:")?></label>
+                    <img ng-if="config.modal_image" ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.modal_image}}" width="100"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <table class="table" ng-show="previewer_img_uploader.queue.length">
+                        <thead>
+                        <tr>
+                            <th width="50%"><?php echo $this->_("Name"); ?></th>
+                            <th ng-show="previewer_img_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                            <th ng-show="previewer_img_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                            <th class="text-center"><?php echo $this->_("Status"); ?></th>
+                            <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in previewer_img_uploader.queue" ng-show="previewer_img_uploader.queue.length">
+                            <td>
+                                <strong>{{ item.file.name }}</strong>
+                                <div ng-show="previewer_img_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                            </td>
+                            <td ng-show="previewer_img_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                            <td ng-show="previewer_img_uploader.isHTML5">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                                <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                                <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                            </td>
+                            <td class="text-center" nowrap>
+                                <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </sb-section>
+
+    <sb-section title="'<?php echo addslashes($this->_("No store Settings")) ?>'">
+        <form id="form_qrcode_alt" class="form-horizontal" ng-submit="saveModal();">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="help-block"><?php echo $this->_("When QRCode can't redirect your users (when there are no stores for the user's device, for example), the following text will be displayed on an error page:"); ?></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label><?php echo $this->_("No Store text:") ?></label>
+                    <ng-ckeditor ng-if="config" bind="config.qrcode_alt_text" skin="moono" remove-buttons="Image,Button,HiddenField,ImageButton,Select,Textarea,TextField,Radio,Checkbox,Form" remove-plugins="print,iframe,flash,smiley,pagebreak,language,scayt,selectall,templates,specialchar" msn-count="Number of typed characters:"></ng-ckeditor>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="submit" class="btn btn-primary pull-right" value="<?php echo $this->_("Save") ?>">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="help-block"><?php echo $this->_("You can also add an image which will be displayed above the previous text:"); ?></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <p class="help-block"><b><?php echo $this->_("File types:"); ?></b> jpg, png, ico, gif</p>
+                </div>
+            </div>
+            <div class="form-group upload_area">
+                <div class="col-md-3 ">
+                    <div class="upload_a_file">
+                        <label for="qrcode_img_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                        <input id="qrcode_img_uploader" type="file" nv-file-select="" uploader="qrcode_img_uploader" />
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="drop_a_file">
+                        <label><?php echo $this->_("OR"); ?></label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="drop_a_file">
+                        <label><?php echo $this->_("Drop your image here"); ?></label>
+                        <div ng-show="qrcode_img_uploader.isHTML5">
+                            <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="qrcode_img_uploader" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2" ng-if="config.qrcode_alt_image">
+                    <label><?php echo $this->_("Current image:")?></label>
+                    <img ng-if="config.qrcode_alt_image" ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.qrcode_alt_image}}" width="100"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <table class="table" ng-show="qrcode_img_uploader.queue.length">
+                        <thead>
+                        <tr>
+                            <th width="50%"><?php echo $this->_("Name"); ?></th>
+                            <th ng-show="qrcode_img_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                            <th ng-show="qrcode_img_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                            <th class="text-center"><?php echo $this->_("Status"); ?></th>
+                            <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in qrcode_img_uploader.queue" ng-show="qrcode_img_uploader.queue.length">
+                            <td>
+                                <strong>{{ item.file.name }}</strong>
+                                <div ng-show="qrcode_img_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                            </td>
+                            <td ng-show="qrcode_img_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                            <td ng-show="qrcode_img_uploader.isHTML5">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                                <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                                <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                            </td>
+                            <td class="text-center" nowrap>
+                                <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </sb-section>
+</form>

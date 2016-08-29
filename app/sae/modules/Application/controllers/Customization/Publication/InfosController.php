@@ -17,6 +17,7 @@ class Application_Customization_Publication_InfosController extends Application_
 
             try {
 
+
                 if(!empty($data["name"])) {
                     if(is_numeric(substr($data["name"], 0, 1))) {
                         throw new Exception("The application's name cannot start with a number");
@@ -25,6 +26,12 @@ class Application_Customization_Publication_InfosController extends Application_
                 } else if(!empty($data['description'])) {
                     if(strlen($data['description']) < 200) throw new Exception($this->_('The description must be at least 200 characters'));
                     $this->getApplication()->setDescription($data['description'])->save();
+                } else if(!empty($data['android_version'])) {
+                    if(!preg_match("#^([0-9\.]+)$#", $data['android_version'])) {
+                        throw new Exception($this->_('Invalid version'));
+                    } else {
+                        $this->getApplication()->getDevice(2)->setVersion($data['android_version'])->save();
+                    }
                 } else if(!empty($data['keywords'])) {
                     $this->getApplication()->setKeywords($data['keywords'])->save();
                 } else if(!empty($data['bundle_id'])) {
@@ -125,17 +132,23 @@ class Application_Customization_Publication_InfosController extends Application_
                 $application->setDesignCode($design_code);
             }
 
-            $type = "zip";
+            $type = $this->getRequest()->getParam("type");
             $device = ($this->getRequest()->getParam("device_id") == 1) ? "ios" : "android";
             $noads = ($this->getRequest()->getParam("no_ads") == 1) ? "noads" : "";
             $pDesign = $this->getRequest()->getParam("design_code");
             $design_code = (!empty($pDesign)) ? $pDesign : "ionic";
+
+            # ACL Apk user
+            if($type == "apk" && !$this->getAdmin()->canGenerateApk()) {
+                throw new Exception("You are not allowed to generate APK.");
+            }
 
             if($type == "apk") {
                 $queue = new Application_Model_ApkQueue();
 
                 $queue->setAppId($application->getId());
                 $queue->setName($application->getName());
+                $application->getDevice(2)->setStatusId(3)->save();
             } else {
                 $queue = new Application_Model_SourceQueue();
 
@@ -147,8 +160,10 @@ class Application_Customization_Publication_InfosController extends Application_
 
             $queue->setHost($this->getRequest()->getHttpHost());
             $queue->setUserId($this->getSession()->getAdminId());
+            $queue->setUserType("admin");
             $queue->save();
 
+            $more["apk"] = Application_Model_ApkQueue::getPackages($application->getId());
             $more["zip"] = Application_Model_SourceQueue::getPackages($application->getId());
             $more["queued"] = Application_Model_Queue::getPosition($application->getId());
 
@@ -167,6 +182,36 @@ class Application_Customization_Publication_InfosController extends Application_
 
         $this->_sendHtml($data);
 
+    }
+
+    public function cancelqueueAction() {
+        if($data = $this->getRequest()->getParams()) {
+
+            $application = $this->getApplication();
+            $type = $this->getRequest()->getParam("type");
+            $device = ($this->getRequest()->getParam("device_id") == 1) ? "ios" : "android";
+            $noads = ($this->getRequest()->getParam("no_ads") == 1) ? "noads" : "";
+
+            Application_Model_Queue::cancel($application->getId(), $type, $device.$noads);
+
+            $more["apk"] = Application_Model_ApkQueue::getPackages($application->getId());
+            $more["zip"] = Application_Model_SourceQueue::getPackages($application->getId());
+            $more["queued"] = Application_Model_Queue::getPosition($application->getId());
+
+            $data = array(
+                "success" => 1,
+                "message" => __("Generation cancelled."),
+                "more" => $more,
+            );
+
+        } else {
+            $data = array(
+                "error" => 1,
+                "message" => __("Missing parameters for cancellation."),
+            );
+        }
+
+        $this->_sendHtml($data);
     }
 
     public function switchtoionicAction() {

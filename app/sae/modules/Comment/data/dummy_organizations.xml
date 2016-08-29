@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <newswall>
+            <content>
+                <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</text>
+                <image>/../../images/templates/big_company/content/company2.png</image>
+            </content>
+            <content>
+                <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</text>
+                <image>/../../images/templates/big_company/content/company3.png</image>
+            </content>
+        </newswall>
+    </big_company>
+    <publisher>
+        <newswall>
+            <content>
+                <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</text>
+                <image>/../../images/templates/publisher/content/publish.png</image>
+            </content>
+            <content>
+                <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</text>
+                <image>/../../images/templates/publisher/content/publish2.png</image>
+            </content>
+        </newswall>
+    </publisher>
+</designs>

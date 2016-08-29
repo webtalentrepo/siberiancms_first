@@ -1,0 +1,588 @@
+<div class="alert alert-info">
+    <i class="fa fa-exclamation-triangle"></i> <?php echo $this->_("All fields are mandatory."); ?>
+</div>
+<form id="form_upload" class="form-horizontal" method="post">
+    <sb-section title="'<?php echo addslashes($this->_("Configuration Settings")) ?>'">
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <label for="app_name"><?php echo $this->_("Application Name:") ?></label>
+                <input type="text" id="app_name" name="app_name" class="form-control" ng-model="tmp_config.app_name" maxlength="50"/>
+            </div>
+            <div class="col-md-4">
+                <label for="bundle_id"><?php echo $this->_("Bundle ID:") ?></label>
+                <input type="text" id="bundle_id" name="bundle_id" class="form-control" ng-model="tmp_config.bundle_id" maxlength="150"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <label for="background_color"><?php echo $this->_("Background color:") ?></label>
+                <input colorpicker type="text" id="background_color" name="background_color" class="form-control" ng-model="tmp_config.background_color" maxlength="8"/>
+            </div>
+            <div class="col-md-4">
+                <label for="font_color"><?php echo $this->_("Font color:") ?></label>
+                <input colorpicker type="text" id="font_color" name="font_color" class="form-control" ng-model="tmp_config.font_color" maxlength="8"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8 col-md-offset-2">
+                <label for="info_p_1"><?php echo $this->_("Information Text, first paragraph:") ?></label>
+                <textarea id="info_p_1" name="info_p_1" class="form-control" ng-model="tmp_config.info_text_1" maxlength="250"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8 col-md-offset-2">
+                <label for="info_p_2"><?php echo $this->_("Information Text, second paragraph:") ?></label>
+                <textarea id="info_p_2" name="info_p_2" class="form-control" ng-model="tmp_config.info_text_2" maxlength="250"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <button type="button" class="btn btn-primary pull-right" ng-click="clickSave();"><?php echo $this->_("Save") ?></button>
+            </div>
+        </div>
+    </sb-section>
+<!--    <div ng-show="config.app_name && config.bundle_id && config.background_color && config.font_color && config.info_text_1">-->
+    <sb-section title="'<?php echo addslashes($this->_("Start-up images Settings")) ?>'">
+        <div class="form-group">
+            <div class="col-md-12">
+                <p class="help-block"><b><?php echo $this->_("File types:"); ?></b> jpg, png, ico, gif</p>
+            </div>
+        </div>
+        <div class="form-group upload_area">
+            <div class="col-md-10">
+                <h4><?php echo $this->_("Start-up image 320x480:"); ?></h4>
+            </div>
+            <div class="col-md-3 ">
+                <div class="upload_a_file">
+                    <label for="img_320_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_320_uploader" type="file" nv-file-select="" uploader="img_320_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_320_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_320_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.startup_image">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.startup_image}}" width="100"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_320_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_320_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_320_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_320_uploader.queue" ng-show="img_320_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_320_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_320_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_320_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-group upload_area">
+            <div class="col-md-10">
+                <h4><?php echo $this->_("Start-up image 640x960:"); ?></h4>
+            </div>
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_640_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_640_uploader" type="file" nv-file-select="" uploader="img_640_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_640_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_640_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.startup_image_retina">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.startup_image_retina}}" width="100"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_640_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_640_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_640_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_640_uploader.queue" ng-show="img_640_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_640_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_640_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_640_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-group upload_area">
+            <div class="col-md-10">
+                <h4><?php echo $this->_("Start-up image 640x1136:"); ?></h4>
+            </div>
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_640_1136_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_640_1136_uploader" type="file" nv-file-select="" uploader="img_640_1136_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_640_1136_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_640_1136_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.startup_image_retina_4">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.startup_image_retina_4}}" width="100"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_640_1136_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_640_1136_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_640_1136_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_640_1136_uploader.queue" ng-show="img_640_1136_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_640_1136_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_640_1136_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_640_1136_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="form-group upload_area">
+            <div class="col-md-10">
+                <h4><?php echo $this->_("Start-up image 750x1334:"); ?></h4>
+            </div>
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_750_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_750_uploader" type="file" nv-file-select="" uploader="img_750_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_750_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_750_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.startup_image_iphone_6_plus">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.startup_image_iphone_6_plus}}" width="100"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_750_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_750_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_750_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_750_uploader.queue" ng-show="img_750_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_750_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_750_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_750_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-group upload_area">
+            <div class="col-md-10">
+                <h4><?php echo $this->_("Start-up image 1242x2208:"); ?></h4>
+            </div>
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_1242_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_1242_uploader" type="file" nv-file-select="" uploader="img_1242_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_1242_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_1242_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.startup_image_iphone_6_plus">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.startup_image_iphone_6_plus}}" width="100"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_1242_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_1242_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_1242_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_1242_uploader.queue" ng-show="img_1242_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_1242_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_1242_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_1242_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </sb-section>
+    <sb-section title="'<?php echo addslashes($this->_("Application Icon Settings")) ?>'">
+        <div class="form-group">
+            <div class="col-md-12">
+                <p class="help-block"><b><?php echo $this->_("File types:"); ?></b> png</p>
+                <p class="help-block"><b><?php echo $this->_("A 1024x1024px max icon which will be the icon of your app on the user device after installation."); ?></b></p>
+            </div>
+        </div>
+        <div class="form-group upload_area">
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_icon_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_icon_uploader" type="file" nv-file-select="" uploader="img_icon_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_icon_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_icon_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.icon">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.icon}}" width="100"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_icon_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_icon_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_icon_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_icon_uploader.queue" ng-show="img_icon_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_icon_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_icon_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_icon_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </sb-section>
+    <sb-section title="'<?php echo addslashes($this->_("Logo image Settings")) ?>'">
+        <div class="form-group">
+            <div class="col-md-12">
+                <p class="help-block"><b><?php echo $this->_("File types:"); ?></b> png</p>
+                <p class="help-block"><b>500x150px max.</b></p>
+            </div>
+        </div>
+        <div class="form-group upload_area">
+            <div class="col-md-3">
+                <div class="upload_a_file">
+                    <label for="img_logo_uploader"><?php echo $this->_("Click here to send your image"); ?></label>
+                    <input id="img_logo_uploader" type="file" nv-file-select="" uploader="img_logo_uploader" />
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("OR"); ?></label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="drop_a_file">
+                    <label><?php echo $this->_("Drop your image here"); ?></label>
+                    <div ng-show="img_logo_uploader.isHTML5">
+                        <div class="well drop-zone" nv-file-drop="" nv-file-over="" uploader="img_logo_uploader" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2" ng-if="config.logo">
+                <label><?php echo $this->_("Current image:")?></label>
+                <img ng-src="<?php echo Previewer_Model_Previewer::PATH_IMAGE; ?>{{config.logo}}" width="100"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <table class="table" ng-show="img_logo_uploader.queue.length">
+                    <thead>
+                    <tr>
+                        <th width="50%"><?php echo $this->_("Name"); ?></th>
+                        <th ng-show="img_logo_uploader.isHTML5"><?php echo $this->_("Size"); ?></th>
+                        <th ng-show="img_logo_uploader.isHTML5"><?php echo $this->_("Progress"); ?></th>
+                        <th><?php echo $this->_("Status"); ?></th>
+                        <th class="text-center"><?php echo $this->_("Action"); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in img_logo_uploader.queue" ng-show="img_logo_uploader.queue.length">
+                        <td>
+                            <strong>{{ item.file.name }}</strong>
+                            <div ng-show="img_logo_uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        </td>
+                        <td ng-show="img_logo_uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                        <td ng-show="img_logo_uploader.isHTML5">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span ng-show="item.isSuccess"><i class="fa fa-check"></i></span>
+                            <span ng-show="item.isCancel"><i class="fa fa-ban"></i></span>
+                            <span ng-show="item.isError"><i class="fa fa-remove"></i></span>
+                        </td>
+                        <td class="text-center" nowrap>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </sb-section>
+
+    <sb-section title="'<?php echo addslashes($this->_("Mobile Source Codes")) ?>'">
+            <div class="form-group" ng-if="!canDownloadPreviewer()">
+                <div class="col-md-12">
+                    <div class="alert alert-info">
+                        <?php echo $this->_("In order to download your previewer, please fill in all information and images.") ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-if="canDownloadPreviewer()">
+                <div class="col-md-4 col-md-offset-2 text-center">
+                    <label class="control-label">iPhone Version</label>
+                    <a href="previewer/backoffice_edit/downloadsource/type/ios" class="block" target="_self"><i class="fa fa-cloud-download"></i> Download</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <label class="control-label">Android Version</label>
+                    <a href="previewer/backoffice_edit/downloadsource/type/android" class="block" target="_self"><i class="fa fa-cloud-download"></i> Download</a>
+                </div>
+            </div>
+    </sb-section>
+<!--    </div>-->
+</form>

@@ -1,0 +1,15 @@
+{
+  "name": "IndividualPush",
+  "description": "Send individual push notifications to your app users.",
+  "version": "4.3.0",
+  "type": "module",
+  "dependencies": {
+    "system": {
+      "type": "SAE",
+      "version": "4.3.0"
+    },
+    "modules": {
+      "Push": "4.2.0"
+    }
+  }
+}

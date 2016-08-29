@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <content type_id="2">
+            <cover>/../../images/templates/big_company/content/company11.png</cover>
+            <links>
+                <link>
+                    <title>Petroleum</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+                <link>
+                    <title>Gaz</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+                <link>
+                    <title>Water</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+            </links>
+        </content>
+    </big_company>
+    <lawyer>
+        <content type_id="2">
+            <links>
+                <link>
+                    <title>Partner 1</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+                <link>
+                    <title>Partner 2</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+                <link>
+                    <title>Partner 3</title>
+                    <url>http://www.google.com</url>
+                    <picto></picto>
+                </link>
+            </links>
+        </content>
+    </lawyer>
+</designs>
+

@@ -12,14 +12,14 @@
             </button>
         </h3>
         <div class="container-fluid first-row-feature">
-            <table id="table_products_list" class="table inner_content table-hover">
+            <table id="table_products_list" class="table content-white-bkg">
                 <col width="20px" />
                 <col width="35%" />
                 <col width="40%" />
                 <col width="50px" />
                 <col width="100px" />
                 <thead>
-                    <tr>
+                    <tr class="border-blue">
                         <th><?php echo $this->_('Id'); ?></th>
                         <th><?php echo $this->_('Product'); ?></th>
                         <th><?php echo $this->_('Description'); ?></th>
@@ -38,15 +38,6 @@
                     </tr>
                     <?php endforeach ?>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td><?php echo $this->_('Id'); ?></td>
-                        <td><?php echo $this->_('Product'); ?></td>
-                        <td><?php echo $this->_('Description'); ?></td>
-                        <td><?php echo $this->_('Price'); ?></td>
-                        <td></td>
-                    </tr>
-                </tfoot>
             </table>
 
         </div>
@@ -66,11 +57,37 @@
             { name: 'styles', items: [ 'TextColor', 'Format' ] }
         ];
 
+        var dataTableLanguage = {
+            "decimal":        "",
+            "emptyTable":     "<?php echo __js("No data available in table") ?>",
+            "info":           "<?php echo __js("Showing _START_ to _END_ of _TOTAL_ entries") ?>",
+            "infoEmpty":      "<?php echo __js("Showing 0 to 0 of 0 entries") ?>",
+            "infoFiltered":   "<?php echo __js("(filtered from _MAX_ total entries)") ?>",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "<?php echo __js("Show _MENU_ entries") ?>",
+            "loadingRecords": "<?php echo __js("Loading...") ?>",
+            "processing":     "<?php echo __js("Processing...") ?>",
+            "search":         "<?php echo __js("Search:") ?>",
+            "zeroRecords":    "<?php echo __js("No matching records found") ?>",
+            "paginate": {
+                "first":      "<?php echo __js("First") ?>",
+                "last":       "<?php echo __js("Last") ?>",
+                "next":       "<?php echo __js("Next") ?>",
+                "previous":   "<?php echo __js("Previous") ?>"
+            },
+            "aria": {
+                "sortAscending":  "<?php echo __js(": activate to sort column ascending") ?>",
+                "sortDescending": "<?php echo __js(": activate to sort column descending") ?>"
+            }
+        };
+
         var product_picture_uploader = new Uploader();
         var products = {
             is_loaded: false,
             processEvents: function() {
                 $('#table_products_list').dataTable({
+                    language: dataTableLanguage,
                     bLengthChange: false,
                     bFilter: true,
                     sPaginationType: "full_numbers",
@@ -121,7 +138,6 @@
                         $('<input />').attr('type', 'hidden').attr('name', 'option_value_id').addClass('option_value_id').val('<?php echo $catalog_option->getId(); ?>').appendTo(element);
                         if(element.attr('rel')) $('<input />').attr('type', 'hidden').attr('name', 'product_id').val(element.attr('rel')).appendTo(element);
                     }
-
                     this.load(element);
                 }.bind(this));
             },
@@ -338,7 +354,6 @@
                         $('<input />').attr('type', 'hidden').attr('name', 'option_value_id').addClass('option_value_id').val('<?php echo $catalog_option->getId(); ?>').appendTo(element);
                         if(element.attr('rel')) $('<input />').attr('type', 'hidden').attr('name', 'group_id').val(element.attr('rel')).appendTo(element);
                     }
-
                     this.load(element);
                 }.bind(this));
             },
@@ -364,20 +379,27 @@
                     var checkbox = $(this);
                     var group_id = checkbox.attr('rel');
                     var ul = $('#group_option_'+checkbox.val());
-
                     if(ul.length) {
-                        if(checkbox.is(':checked')) {
-                            $('#group_option_'+option_id+':visible').removeAttr('readonly');
-                            $('#input_group_option_is_deleted_'+option_id).attr('disabled', 'disabled');
-                            $('#group_option_is_deleted_'+group_id).attr('disabled', 'disabled');
-                            $('#group_option_'+option_id).focus();
+                        if (checkbox.is(':checked')) {
+                            $('#group_option_' + option_id + ':visible').removeAttr('readonly');
+                            $('#input_group_option_is_deleted_' + option_id).attr('disabled', 'disabled');
+                            $('#group_option_is_deleted_' + group_id).attr('disabled', 'disabled');
+                            $('#group_option_' + option_id).focus();
                         }
                         else {
-                            $('#group_option_'+option_id+':visible').attr('readonly', 'readonly');
-                            $('#input_group_option_is_deleted_'+option_id).removeAttr('disabled');
-                            if($('.select_group_option_'+group_id+':checked').length == 0) {
-                                $('#group_option_is_deleted_'+group_id).removeAttr('disabled');
+                            $('#group_option_' + option_id + ':visible').attr('readonly', 'readonly');
+                            $('#input_group_option_is_deleted_' + option_id).removeAttr('disabled');
+                            if ($('.select_group_option_' + group_id + ':checked').length == 0) {
+                                $('#group_option_is_deleted_' + group_id).removeAttr('disabled');
                             }
+                        }
+                    }
+                    else if (checkbox.hasClass('as_checkbox')){
+                        if (checkbox.is(':checked')) {
+                            $('#input_group_option_is_deleted_' + option_id).attr('disabled', 'disabled');
+                        }
+                        else {
+                            $('#input_group_option_is_deleted_' + option_id).removeAttr('disabled');
                         }
                     }
                 });
@@ -397,8 +419,10 @@
             },
 
             load: function(a) {
-
-                reload(a, '<?php echo $this->getUrl('mcommerce/application_catalog_product_group/edit'); ?>', true, function(datas) {
+                var editor_url = a.hasClass('require-choice-editor') ?
+                    '<?php echo $this->getUrl('mcommerce/application_catalog_product_group/edit'); ?>?require-choice-editor=true' :
+                    '<?php echo $this->getUrl('mcommerce/application_catalog_product_group/edit'); ?>';
+                reload(a, editor_url, true, function(datas) {
                     if(datas.form_html) {
                         $('#group_edit').html(datas.form_html);
                         this.group.setOptionDummy();
@@ -408,7 +432,7 @@
                             reload(this, this.action, true, function(datas) {
                                 if(datas.success) {
                                     if(datas.row_html) {
-                                        $('#groups_list').append(datas.row_html);
+                                        a.parents('fieldset').find('.list-group-slot').append(datas.row_html);
                                         $('input.select_group_option_'+datas.group_id).each(function(i, element) {
                                             this.bindSelectGroupOption($(element));
                                         }.bind(this));
@@ -545,13 +569,7 @@
         text-align: left;
     }
     .products .products_list table.dataTable th, .products table.dataTable td {
-        padding: 10px;
-    }
-    .products .products_list table.dataTable thead tr {
-        border-bottom: 3px solid;
-    }
-    .products .products_list table.dataTable tfoot tr {
-        border-top: 3px solid;
+        /**padding: 10px;*/
     }
 
     .products .products_list table.dataTable tbody tr.edit_product {
@@ -572,6 +590,9 @@
     }
     .products .products_list .dataTables_paginate a.paginate_button_disabled {
         opacity: 0.3
+    }
+    .products .products_list .dataTable tbody tr:last-of-type {
+        border-bottom: 0;
     }
 
     #cke_product_description .cke_button__image { display:none; }

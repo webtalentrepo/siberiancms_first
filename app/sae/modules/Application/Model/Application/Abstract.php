@@ -144,7 +144,7 @@ abstract class Application_Model_Application_Abstract extends Core_Model_Default
      * @param $device_id
      * @return Application_Model_Device_Ionic_Android|Application_Model_Device_Ionic_Ios
      */
-    public function getDevice($device_id) {
+    public function  getDevice($device_id) {
 
         if(empty($this->_devices[$device_id])) {
             $device = new Application_Model_Device();
@@ -527,6 +527,13 @@ abstract class Application_Model_Application_Abstract extends Core_Model_Default
             self::DESIGN_CODE_ANGULAR => ucfirst(self::DESIGN_CODE_ANGULAR),
             self::DESIGN_CODE_IONIC => ucfirst(self::DESIGN_CODE_IONIC)
         );
+    }
+
+    public static function hasModuleInstalled($code) {
+        $module = new Installer_Model_Installer_Module();
+        $module->prepare($code, false);
+
+        return $module->isInstalled();
     }
 
     public function getLogo() {

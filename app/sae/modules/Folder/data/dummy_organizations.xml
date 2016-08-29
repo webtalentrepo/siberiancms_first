@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <!--<folders>-->
+            <!--<folder>-->
+                <!--<category>-->
+                    <!--<main>-->
+                        <!--<content>-->
+                            <!--<type_id>folder</type_id>-->
+                            <!--<title>Lorem ipsum</title>-->
+                        <!--</content>-->
+                        <!--<features>-->
+                            <!--<code>contact</code>-->
+                        <!--</features>-->
+                    <!--</main>-->
+                    <!--<subcategory>-->
+                        <!--<content>-->
+                            <!--<type_id>folder</type_id>-->
+                            <!--<title>Proin</title>-->
+                        <!--</content>-->
+                        <!--<features>-->
+                            <!--<code>fanwall</code>-->
+                            <!--<code>discount</code>-->
+                        <!--</features>-->
+                    <!--</subcategory>-->
+                    <!--<subcategory>-->
+                        <!--<content>-->
+                            <!--<type_id>folder</type_id>-->
+                            <!--<title>Aliquam</title>-->
+                        <!--</content>-->
+                    <!--</subcategory>-->
+                <!--</category>-->
+            <!--</folder>-->
+        <!--</folders>-->
+    </big_company>
+</designs>
+

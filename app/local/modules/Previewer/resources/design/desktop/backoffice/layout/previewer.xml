@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+    <previewer_backoffice_edit_template>
+        <views>
+            <content class="core_view_default" template="html/default.phtml" />
+            <page_content class="core_view_default" template="previewer/edit.phtml" />
+        </views>
+    </previewer_backoffice_edit_template>
+
+    <previewer_backoffice_modal_template>
+        <views>
+            <content class="core_view_default" template="html/default.phtml" />
+            <page_content class="core_view_default" template="previewer/editmodal.phtml" />
+        </views>
+    </previewer_backoffice_modal_template>
+
+</layout>

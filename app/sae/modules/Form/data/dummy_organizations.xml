@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <content>
+            <form>
+                <email>lorem@loremipsum.co</email>
+            </form>
+            <form_sections>
+                <section>
+                    <name>Lorem Ipsum</name>
+                    <fields>
+                        <field>
+                            <name>Lorem</name>
+                            <type>texte</type>
+                        </field>
+                        <field>
+                            <name>Lorem</name>
+                            <type>nombre</type>
+                        </field>
+                    </fields>
+                </section>
+                <section>
+                    <name>Lorem Ipsum</name>
+                    <fields>
+                        <field>
+                            <name>Lorem</name>
+                            <type>checkbox</type>
+                            <option>Option 1;Option 2;Option 3</option>
+                        </field>
+                        <field>
+                            <name>Lorem</name>
+                            <type>textarea</type>
+                        </field>
+                    </fields>
+                </section>
+            </form_sections>
+        </content>
+    </big_company>
+    <publisher>
+        <content>
+            <form>
+                <email>test@testest.com</email>
+            </form>
+            <form_sections>
+                <section>
+                    <name>1st Section</name>
+                    <fields>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>texte</type>
+                        </field>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>textarea</type>
+                        </field>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>date</type>
+                        </field>
+                    </fields>
+                </section>
+                <section>
+                    <name>2nd Section</name>
+                    <fields>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>email</type>
+                        </field>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>geoloc</type>
+                        </field>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>checkbox</type>
+                            <option>Lorem;Lorem;Lorem</option>
+                        </field>
+                    </fields>
+                </section>
+                <section>
+                    <name>3rd Section</name>
+                    <fields>
+                        <field>
+                            <name>Lorem</name>
+                            <type>select</type>
+                            <option>Lorem Ipsum;Lorem Ipsum;Lorem Ipsum</option>
+                        </field>
+                        <field>
+                            <name>Lorem Ipsum</name>
+                            <type>date</type>
+                        </field>
+                        <field>
+                            <name>Ipsum</name>
+                            <type>radio</type>
+                            <option>Lorem Ipsum;Lorem Ipsum;Lorem Ipsum</option>
+                        </field>
+                    </fields>
+                </section>
+            </form_sections>
+        </content>
+    </publisher>
+    <lawyer>
+        <content>
+            <form>
+                <email>lawyer@lawyer.com</email>
+            </form>
+            <form_sections>
+                <section>
+                    <name>Appointment Form</name>
+                    <fields>
+                        <field>
+                            <name>Name</name>
+                            <type>textarea</type>
+                        </field>
+                        <field>
+                            <name>Email</name>
+                            <type>email</type>
+                        </field>
+                        <field>
+                            <name>Phone Number</name>
+                            <type>nombre</type>
+                        </field>
+                        <field>
+                            <name>Date/Hour</name>
+                            <type>date</type>
+                        </field>
+                    </fields>
+                </section>
+            </form_sections>
+        </content>
+    </lawyer>
+</designs>

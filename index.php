@@ -1,5 +1,6 @@
 <?php
-
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, *');
+header('Access-Control-Allow-Origin: *');
 /**
  * SiberianCMS
  *

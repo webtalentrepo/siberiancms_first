@@ -53,7 +53,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         if(APPLICATION_ENV == "production") {
             error_reporting(0);
         } else {
-            # error_reporting(32767);
             # This reports TOO Much errors, corrupting json, response & headers
             # Limiting to critical for general purpose only
             error_reporting(501);
@@ -155,7 +154,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             $this->_front_controller->addModuleDirectory("$base/local/modules");
         }
 
-        Siberian_Cache_Design::init();
         Siberian_Utils::load();
     }
 
@@ -213,6 +211,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     protected function _initDesign() {
+
+        Siberian_Cache_Design::init();
 
         $this->getPluginLoader()->addPrefixPath('Siberian_Application_Resource', 'Siberian/Application/Resource');
 

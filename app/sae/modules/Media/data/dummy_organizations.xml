@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <publisher>
+        <images>
+            <!--<image type="picasa">-->
+            <!--<content>-->
+            <!--<type_id>picasa</type_id>-->
+            <!--<name>Siberian</name>-->
+            <!--<type>search</type>-->
+            <!--<param>siberiancms</param>-->
+            <!--</content>-->
+            <!--</image>-->
+            <image type="custom">
+                <content>
+                    <type_id>custom</type_id>
+                    <name>1st Gallery</name>
+                </content>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish5.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish3.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish4.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish5.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish4.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish3.jpg</url>
+                    <description></description>
+                </custom>
+            </image>
+            <image type="custom">
+                <content>
+                    <type_id>custom</type_id>
+                    <name>2nd Gallery</name>
+                </content>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish5.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish4.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish3.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish5.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish4.jpg</url>
+                    <description></description>
+                </custom>
+                <custom>
+                    <url>/../../images/templates/publisher/content/publish3.jpg</url>
+                    <description></description>
+                </custom>
+            </image>
+        </images>
+    </publisher>
+    <big_company>
+
+    </big_company>
+</designs>
+

@@ -1,0 +1,12 @@
+{
+  "name": "Previewer",
+  "decription": "This app will allow your clients to preview the apps you are building for them.",
+  "version": "4.4.1",
+  "type": "module",
+  "dependencies": {
+    "system": {
+      "type": "SAE",
+      "version": "4.4.0"
+    }
+  }
+}

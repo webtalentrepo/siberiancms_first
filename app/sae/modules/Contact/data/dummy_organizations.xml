@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <content>
+            <name>Big Company</name>
+            <cover>/../../images/templates/big_company/content/company10.png</cover>
+            <phone>09999999</phone>
+            <street>2345 Market Street</street>
+            <postcode>95240</postcode>
+            <city>San Francisco</city>
+            <country>United States</country>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+            <email>lorem@loremipsum.co</email>
+            <website>http://www.google.com</website>
+            <facebook>http://www.google.com</facebook>
+            <twitter>http://www.google.com</twitter>
+        </content>
+    </big_company>
+    <publisher>
+        <content>
+            <name>Publisher</name>
+            <phone>999999999</phone>
+            <street>2345 Market Street</street>
+            <postcode>95240</postcode>
+            <city>San Francisco</city>
+            <country>United States</country>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+            <email>test@testest.com</email>
+            <website>http://www.google.com</website>
+            <facebook>http://www.google.com</facebook>
+            <twitter>http://www.google.com</twitter>
+        </content>
+    </publisher>
+    <lawyer>
+        <content>
+            <name>Lawyer</name>
+            <cover>/../../images/templates/lawyer/content/lawyer3.jpeg</cover>
+            <phone>09999999999</phone>
+            <street>2345 Market Street</street>
+            <postcode>CA 94111</postcode>
+            <city>San Francisco</city>
+            <country>USA</country>
+            <email>lawyer@lawyer.com</email>
+            <website>http://www.google.com</website>
+        </content>
+    </lawyer>
+</designs>

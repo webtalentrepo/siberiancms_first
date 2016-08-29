@@ -1,1 +1,5 @@
-{"content_url":"http:\/\/192.168.31.128\/var\/apps\/ionic\/android\/assets\/www","min_native_interface":"1","release":"4.3.1"}
+{
+    "content_url": "http://192.168.31.128/var/apps/ionic/android/assets/www/",
+    "min_native_interface": "1",
+    "release": "4.4.2.1472412068"
+}

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designs>
+    <big_company>
+        <blocks>
+            <block>
+                <type>image</type>
+                <position>1</position>
+                <description></description>
+                <library_id></library_id>
+                <image_url>/../../images/templates/big_company/content/company.jpg</image_url>
+                <image_fullsize_url>/../../images/templates/big_company/content/company.jpg</image_fullsize_url>
+            </block>
+            <block>
+                <type>text</type>
+                <position>2</position>
+                <content>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </content>
+            </block>
+            <block>
+                <type>address</type>
+                <position>3</position>
+                <label>Address</label>
+                <address>2845 Market Street, San Francisco, Californie, États-Unis</address>
+                <latitude>37.7514156</latitude>
+                <longitude>-122.23549009999999</longitude>
+                <show_address>0</show_address>
+                <show_geolocation_button>1</show_geolocation_button>
+            </block>
+            <block>
+                <type>text</type>
+                <position>4</position>
+                <content>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </content>
+            </block>
+            <block>
+                <type>button</type>
+                <position>5</position>
+                <type_id>phone</type_id>
+                <content>099999999</content>
+            </block>
+        </blocks>
+        <places>
+            <place>
+                <content>
+                    <title>Los Angeles</title>
+                    <content>Contact us in the city of Angels</content>
+                    <picture>/../../images/templates/big_company/content/company4.png</picture>
+                </content>
+                <block>
+                    <type>address</type>
+                    <position>1</position>
+                    <label>Address</label>
+                    <address>284 Central Avenue, Los Angeles, Californie, États-Unis</address>
+                    <latitude>34.0464268</latitude>
+                    <longitude>-118.23950500000001</longitude>
+                    <show_address>1</show_address>
+                    <show_geolocation_button>1</show_geolocation_button>
+                </block>
+                <block>
+                    <type>image</type>
+                    <position>2</position>
+                    <description></description>
+                    <library_id></library_id>
+                    <image_url>/../../images/templates/big_company/content/company5.jpg</image_url>
+                    <image_url>/../../images/templates/big_company/content/company6.png</image_url>
+                    <image_url>/../../images/templates/big_company/content/company7.jpg</image_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company5.jpg</image_fullsize_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company4.png</image_fullsize_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company7.jpg</image_fullsize_url>
+                </block>
+            </place>
+            <place>
+                <content>
+                    <title>New York City</title>
+                    <content>Contact us in the Big Apple</content>
+                    <picture>/../../images/templates/big_company/content/company8.png</picture>
+                </content>
+                <block>
+                    <type>address</type>
+                    <position>1</position>
+                    <label>Address</label>
+                    <address>2845 Market Street, San Francisco, Californie, États-Unis</address>
+                    <latitude>37.7514156</latitude>
+                    <longitude>-122.23549009999999</longitude>
+                    <show_address>1</show_address>
+                    <show_geolocation_button>1</show_geolocation_button>
+                </block>
+                <block>
+                    <type>image</type>
+                    <position>2</position>
+                    <description></description>
+                    <library_id></library_id>
+                    <image_url>/../../images/templates/big_company/content/company9.jpg</image_url>
+                    <image_url>/../../images/templates/big_company/content/company6.png</image_url>
+                    <image_url>/../../images/templates/big_company/content/company7.jpg</image_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company9.jpg</image_fullsize_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company4.png</image_fullsize_url>
+                    <image_fullsize_url>/../../images/templates/big_company/content/company7.jpg</image_fullsize_url>
+                </block>
+                <block>
+                    <type>button</type>
+                    <position>3</position>
+                    <type_id>link</type_id>
+                    <content>http://www.google.com</content>
+                </block>
+            </place>
+        </places>
+    </big_company>
+    <publisher>
+        <blocks>
+            <block>
+                <type>image</type>
+                <position>1</position>
+                <description></description>
+                <library_id></library_id>
+                <image_url>/../../images/templates/publisher/content/publish9.png</image_url>
+                <image_url>/../../images/templates/publisher/content/publish10.png</image_url>
+                <image_fullsize_url>/../../images/templates/publisher/content/publish9.png</image_fullsize_url>
+                <image_fullsize_url>/../../images/templates/publisher/content/publish10.png</image_fullsize_url>
+            </block>
+            <block>
+                <type>text</type>
+                <position>2</position>
+                <content>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat
+                </content>
+            </block>
+            <block>
+                <type>button</type>
+                <position>3</position>
+                <type_id>phone</type_id>
+                <content>099999999</content>
+            </block>
+            <block>
+                <type>button</type>
+                <position>4</position>
+                <type_id>link</type_id>
+                <content>http://www.google.com</content>
+            </block>
+            <block>
+                <type>address</type>
+                <position>5</position>
+                <label>Our address</label>
+                <address>2345 Market Street, San Francisco, Californie, États-Unis</address>
+                <latitude>37.7514156</latitude>
+                <longitude>-122.23549009999999</longitude>
+                <show_address>0</show_address>
+                <show_geolocation_button>1</show_geolocation_button>
+            </block>
+        </blocks>
+    </publisher>
+    <lawyer>
+        <blocks>
+            <block>
+                <type>image</type>
+                <position>1</position>
+                <description></description>
+                <library_id></library_id>
+                <image_url>/../../images/templates/lawyer/content/lawyer.jpeg</image_url>
+                <image_url>/../../images/templates/lawyer/content/lawyer2.jpeg</image_url>
+                <image_fullsize_url>/../../images/templates/lawyer/content/lawyer.jpeg</image_fullsize_url>
+                <image_fullsize_url>/../../images/templates/lawyer/content/lawyer2.jpeg</image_fullsize_url>
+            </block>
+            <block>
+                <type>text</type>
+                <position>2</position>
+                <content>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </content>
+            </block>
+            <block>
+                <type>address</type>
+                <position>3</position>
+                <label>Our address</label>
+                <address>235 Market Street, San Francisco, Californie, États-Unis</address>
+                <latitude>37.7927656</latitude>
+                <longitude>-122.39699280000002</longitude>
+                <show_address>1</show_address>
+                <show_geolocation_button>1</show_geolocation_button>
+            </block>
+        </blocks>
+        <places>
+            <place>
+                <content>
+                    <title>Office 1</title>
+                    <content>Lorem Ipsum</content>
+                    <!--<picture>/../../images/templates/rush_cafe/content/coffee.png</picture>-->
+                </content>
+                <block>
+                    <type>address</type>
+                    <position>1</position>
+                    <label>Office 1</label>
+                    <address>235 Market Street, San Francisco, Californie, États-Unis</address>
+                    <latitude>37.79968290000001</latitude>
+                    <longitude>-122.28399279999996</longitude>
+                    <show_address>0</show_address>
+                    <show_geolocation_button>0</show_geolocation_button>
+                </block>
+            </place>
+            <place>
+                <content>
+                    <title>Office 2</title>
+                    <content>Lorem Ipsum</content>
+                    <!--<picture>/../../images/templates/rush_cafe/content/coffee.png</picture>-->
+                </content>
+                <block>
+                    <type>address</type>
+                    <position>1</position>
+                    <label>Office 2</label>
+                    <address>164 Market Street, San Francisco, Californie, États-Unis</address>
+                    <latitude>37.79917</latitude>
+                    <longitude>-122.28414520000001</longitude>
+                    <show_address>0</show_address>
+                    <show_geolocation_button>0</show_geolocation_button>
+                </block>
+            </place>
+            <place>
+                <content>
+                    <title>Office 3</title>
+                    <content>Lorem Ipsum</content>
+                    <!--<picture>/../../images/templates/rush_cafe/content/coffee.png</picture>-->
+                </content>
+                <block>
+                    <type>address</type>
+                    <position>1</position>
+                    <label>Office 3</label>
+                    <address>27 California Street, San Francisco, Californie, États-Unis</address>
+                    <latitude>37.7936144</latitude>
+                    <longitude>-122.39681719999999</longitude>
+                    <show_address>0</show_address>
+                    <show_geolocation_button>0</show_geolocation_button>
+                </block>
+            </place>
+        </places>
+    </lawyer>
+</designs>
+
