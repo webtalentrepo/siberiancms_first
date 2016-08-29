@@ -6,7 +6,7 @@
  * Time: 8:59 AM
  */
 $schemas = (!isset($schemas)) ? array() : $schemas;
-$schemas = ['review'] = array(
+$schemas['review'] = array(
 	'review_id' => array(
 		'type' => 'int(11) unsigned',
 		'auto_increment' => true,
