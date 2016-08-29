@@ -2,68 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a94fb59b-3223-4102-ab8d-6e2d1e22f14b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/catalog1-flat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/catalog6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog1-flat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js/controllers/review.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js/factory/review.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/templates/review/l1/view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/layout-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/layout-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/controllers/Application/ReviewController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/css/edit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/js/review.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/css/edit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/js/review.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog1-flat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/media/library/catalog1-flat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/media/library/catalog6.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/catalog1-flat.png" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/layout-2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/catalog6.png" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/images/customization/layout/review/layout-1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog1-flat.png" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/layout-2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/catalog6.png" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review/layout-1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/plugins/cordova-plugin-file/www/browser/isChrome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/application/l1/colors/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/application/l1/colors/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/application/l1/tc/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/application/l1/tc/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/booking/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/booking/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/contact/l1/form.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/contact/l1/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/contact/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/contact/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/customer/account/l1/login.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/customer/account/l1/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/facebook/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/facebook/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/fanwall/l1/edit.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/fanwall/l1/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/fanwall/l1/gallery.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/fanwall/l1/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/html/l5/list.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/html/l5/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/html/l6/list.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/html/l6/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/links/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/links/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/socialgaming/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/socialgaming/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/tip/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/assets/www/templates/tip/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/com/previewer/previewer/AppsList.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/com/previewer/previewer/AppsList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/com/previewer/previewer/Login.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/com/previewer/previewer/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/file/PendingRequests.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/file/PendingRequests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/file/PermissionHelper.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/file/PermissionHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/geolocation/PermissionHelper.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/geolocation/PermissionHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/media/PermissionHelper.java" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/android/src/org/apache/cordova/media/PermissionHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/plugins/cordova-plugin-file/www/browser/isChrome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/application/l1/colors/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/application/l1/colors/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/application/l1/tc/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/application/l1/tc/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/booking/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/booking/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/contact/l1/form.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/contact/l1/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/contact/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/contact/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/customer/account/l1/login.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/customer/account/l1/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/facebook/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/facebook/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/fanwall/l1/edit.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/fanwall/l1/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/fanwall/l1/gallery.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/fanwall/l1/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/html/l5/list.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/html/l5/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/html/l6/list.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/html/l6/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/links/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/links/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/socialgaming/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/socialgaming/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/tip/l1/view.html" afterPath="$PROJECT_DIR$/app/local/modules/Previewer/resources/var/apps/ionic/previewer/ios/www/templates/tip/l1/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/Model/Db/Table/Review.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/Model/Db/Table/Review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/Model/Review.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/Model/Review.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/bootstrap.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/controllers/ApplicationController.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/controllers/ApplicationController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/package.json" afterPath="$PROJECT_DIR$/app/local/modules/Review/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/db/schema/review.php" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/db/schema/review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/apps/ionic/android/assets/www/chcp.json" afterPath="$PROJECT_DIR$/var/apps/ionic/android/assets/www/chcp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/apps/ionic/ios-noads/www/chcp.json" afterPath="$PROJECT_DIR$/var/apps/ionic/ios-noads/www/chcp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/apps/ionic/ios/www/chcp.json" afterPath="$PROJECT_DIR$/var/apps/ionic/ios/www/chcp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/index.phtml" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.phtml" afterPath="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.phtml" />
     </list>
     <ignored path="siberian_1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,18 +52,7 @@
     <favorites_list name="siberian_1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="review.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js/controllers/review.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,15 +96,16 @@
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.phtml" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/controllers/ApplicationController.php" />
-        <option value="$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php" />
-        <option value="$PROJECT_DIR$/app/local/modules/Review/package.json" />
-        <option value="$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/l1/view.html" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/js/review.js" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/js/factories/review.js" />
-        <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml" />
-        <option value="$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php" />
         <option value="$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js/controllers/review.js" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml" />
+        <option value="$PROJECT_DIR$/app/local/modules/Review/package.json" />
       </list>
     </option>
   </component>
@@ -315,11 +274,11 @@
       <recent name="$PROJECT_DIR$/app/local/design/Review/resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian" />
       <recent name="$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js" />
       <recent name="$PROJECT_DIR$/app/local/modules/Review/resources" />
       <recent name="$PROJECT_DIR$/app/local/design/resources" />
       <recent name="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat" />
-      <recent name="$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/images/customization/layout/review" />
     </key>
   </component>
   <component name="RunManager">
@@ -392,7 +351,7 @@
       <workItem from="1472318458528" duration="936000" />
       <workItem from="1472336806225" duration="10064000" />
       <workItem from="1472369187486" duration="17874000" />
-      <workItem from="1472461681959" duration="11649000" />
+      <workItem from="1472461681959" duration="11962000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1472314811962</created>
@@ -419,13 +378,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45215000" />
+    <option name="totallyTimeSpent" value="45528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="959" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19460917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16927224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -465,52 +424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/Model/Review.php5" />
-    <entry file="file://$PROJECT_DIR$/app/sae/modules/Form/Model/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sae/modules/Form/Model/Db/Table/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sae/modules/Form/resources/db/schema/form_section.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/error__57c3fed78bf66.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/Application/ReviewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/error__57c3ff8491f5a.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="388" column="52" selection-start-line="388" selection-start-column="46" selection-end-line="388" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/log/error__57c40aaed0a58.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7618">
@@ -567,14 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/db/schema/review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/template/review/application/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -587,22 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/Model/Review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -639,22 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/Model/Db/Table/Review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/sae/design/desktop/flat/layout/form.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -673,14 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/ApplicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/sae/modules/Form/controllers/MobileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -689,26 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/local/modules/Previewer/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -793,22 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/apps/browser/js/factory/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -821,22 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -859,8 +676,164 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/var/apps/js/controllers/review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="672">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/Mobile/ViewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/ApplicationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/Application/ReviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/Model/Db/Table/Review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/db/data/review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/db/schema/review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/js/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/layout/review.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/controllers/MobileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/layout/review.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/siberian/js/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/template/review/application/edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/resources/design/desktop/flat/css/edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/local/modules/Review/Model/Review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>

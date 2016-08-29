@@ -2,7 +2,7 @@
   "name": "Review",
   "description": "This will be called review where once users logged in they can write a review",
   "type": "module",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "dependencies": {
     "system": {
       "type": "SAE",
