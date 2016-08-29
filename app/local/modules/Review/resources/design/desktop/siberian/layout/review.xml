@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <layout>
-	<review_application_edit>
-		<views>
-			<content class="application_view_customization_features_edit_tabbareditor" template="application/customization/features/edit/tabbar_editor.phtml" />
-			<content_editor class="core_view_default" template="review/application/edit.phtml" />
-		</views>
-	</review_application_edit>
+    <review_application_edit>
+        <views>
+            <content class="application_view_customization_features_edit_tabbareditor"  template="application/customization/features/edit/tabbar_editor.phtml"/>
+            <content_editor class="core_view_default" template="review/application/edit.phtml"/>
+        </views>
+    </review_application_edit>
 </layout>
