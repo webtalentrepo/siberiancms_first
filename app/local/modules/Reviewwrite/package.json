@@ -1,0 +1,12 @@
+{
+  "name": "Reviewwrite",
+  "description": "This will be called review where once users logged in they can write a review",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "system": {
+      "type": "SAE",
+      "version": "4.4.2"
+    }
+  }
+}

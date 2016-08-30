@@ -1,0 +1,23 @@
+<ion-view>
+	<ion-nav-title>{{ page_title }}</ion-nav-title>
+	<ion-content sb-background-image>
+		<form name="form" ng-submit="post()">
+			<div class="list">
+				<div>
+					<label class="item item-input item-custom">
+						<input type="email" class="form-control" required placeholder="user email" ng-model="formData[0]" />
+					</label>
+				</div>
+				<div>
+					<label class="item item-input item-custom">
+						<textarea rows="3" class="form-control" placeholder="Review Content" ng-model="formData[1]"></textarea>
+					</label>
+				</div>
+			</div>
+		</form>
+		<button type="submit" class="button button-block button-custom" ng-click="post()" ng-show="!is_loading">{{ "Send" | translate }}</button>
+		<div class="loader" ng-show="is_loading">
+			<ion-spinner class="spinner-custom"></ion-spinner>
+		</div>
+	</ion-content>
+</ion-view>
